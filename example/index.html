@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Kay的canvas效果库</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		}
+		ul, ol, li{list-style: none;padding: 0; margin: 0;}
+		.none{
+			display: none;
+		}
+		.side {
+			width: 200px;
+			height: 100vh;
+			overflow: auto;
+			padding: 30px 15px;
+			position: fixed;
+			left: 0;
+			top: 0;
+			border-right: 1px solid #eee;
+			box-shadow: 0 0 10px rgba(0,0,0,.1);
+		}
+		.side li{
+			cursor: pointer;
+		}
+		.main{
+			margin-left: 200px;
+			box-sizing: border-box;
+			padding: 10px 15px;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="side">
+		<li data-url="./canvas_round.html">canvas_round</li>
+	</ul>
+	<div class="main">
+		<iframe class="none" id="iframe" src="./canvas_round.html"></iframe>
+	</div>
+	
+
+	<script>
+		var $iframe = document.getElementById('iframe')
+		var $list = document.querySelectorAll('.side li')
+
+		$list.forEach(function (item) {
+			item.addEventListener('click', function(){
+				var url = this.dataset.url
+				$iframe.src = url 
+			})
+		})
+		
+	</script>
+</body>
+
+</html>

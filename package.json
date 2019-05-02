@@ -1,0 +1,15 @@
+{
+  "name": "kay-canvas",
+  "version": "1.0.0",
+  "description": "Kay",
+  "main": "index.js",
+  "repository": "git@github.com:zkisme/kay-canvas.git",
+  "author": "709447790@ <Narney>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}
